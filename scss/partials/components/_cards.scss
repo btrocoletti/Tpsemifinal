@@ -1,0 +1,61 @@
+@use"../utilities/mixins" ;
+@use"../utilities/variables" ;
+
+.card-container {
+  @include mixins.flex(row, space-around, flex-start);
+    flex-wrap: wrap;
+    gap: 32px;
+    width: 100%;
+}
+@keyframes card-flip {
+    25% { transform: rotateY(90deg); }
+    50% { transform: rotateY(180deg); }
+    75% { transform: rotateY(270deg); }
+    100% { transform: rotateY(360deg); }    
+}
+
+.card {
+    display: flex;                   
+    flex-direction: column;             
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin: 16px;
+    border: variables.$border-standard solid variables.$main-color ;
+    box-sizing: border-box;
+    gap: variables.$padding-standard;
+    border-radius: 10px;
+
+}
+.img-card {
+    display: flex;                   
+    flex-direction: column;             
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin: 16px;
+    border: variables.$border-standard solid variables.$main-color ;
+    box-sizing: border-box;
+    gap: variables.$padding-standard;
+    border-radius: 10px;
+    
+}
+.card-text {
+   display: flex;                   
+    flex-direction: column;             
+    width: auto;
+    height: auto;
+    padding: 16px;
+    margin: 16px;
+    border: variables.$border-standard solid variables.$main-color ;
+    box-sizing: border-box;
+    gap: variables.$padding-standard;
+    border-radius: 10px;         
+}
+.card:hover{
+    animation-name: card-flip;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+

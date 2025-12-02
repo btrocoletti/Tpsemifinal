@@ -1,0 +1,12 @@
+@use "../utilities/variables";
+h1{font-size: variables.$main-size ;
+padding: variables.$padding-standard
+ ;
+ background-image: radial-gradient(#ffea02, rgb(70, 131, 5));
+ border-radius: 8px    ;
+}
+h2{padding: variables.$padding-standard ;
+}
+h3{padding: variables.$padding-standard ;
+}
+p{padding: variables.$padding-standard ;}   

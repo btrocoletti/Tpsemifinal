@@ -1,0 +1,11 @@
+@use "../utilities/extend";
+
+
+.main-button {
+    @extend %button;
+}
+.main-button:hover {
+    @extend %button-secondary;
+}
+
+
