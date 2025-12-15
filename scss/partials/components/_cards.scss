@@ -28,18 +28,23 @@
 
 }
 .img-card {
-    display: flex;                   
-    flex-direction: column;             
-    width: auto;
-    height: auto;
-    padding: 16px;
-    margin: 16px;
-    border: variables.$border-standard solid variables.$main-color ;
-    box-sizing: border-box;
-    gap: variables.$padding-standard;
-    border-radius: 10px;
-    
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+
+  border: variables.$border-standard solid variables.$main-color;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+
+
+  padding: 0;
+  margin: 16px 0;
 }
+
+    
+
 .card-text {
    display: flex;                   
     flex-direction: column;             

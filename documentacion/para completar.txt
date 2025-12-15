@@ -1,0 +1,2 @@
+<!-- FAVICON -->
+    <link rel="icon" href="../assets/img/escudoparalogo.png" type="image/x-icon">

@@ -1,43 +1,72 @@
 @use "../utilities/variables";
 
-ul {
-    display: flex;
-    flex-wrap: wrap;        
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px ;
-    padding: 0;
-    margin: 0;
-    li {
-    list-style: none ;
-        a{text-decoration: none;
-          color: variables.$main-color ;
-          &:hover { color: variables.$secondary-color ;
-          text-decoration: underline;
-          transform: translate(3px,3px);
-          }
-         }
- 
 
-    }
+.header .nav {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
 }
-// logo con keyframes
+
+.header .nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: variables.$main-color;
+
+      &:hover {
+        color: variables.$secondary-color;
+        text-decoration: underline;
+        transform: translate(3px, 3px);
+      }
+    }
+  }
+}
+
 @keyframes efecto-custom {
   0% { transform: rotate(0deg); }
   50% { transform: rotate(15deg); }
   100% { transform: rotate(0deg); }
 }
+
 .logo {
-     width: 200px;
-     height: 130px;
-     vertical-align: middle;
-     margin-right: 10px;
-     animation-name: efecto-custom;
-     animation-timing-function: ease-in;
-     animation-iteration-count: infinite;
-     animation-duration: 2s;
-     animation-delay: 0.5s;
+  width: 200px;
+  height: 130px;
+  vertical-align: middle;
+  margin-right: 10px;
+  animation-name: efecto-custom;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
 }
-   
+
+@media (max-width: 768px) {
+  .header .nav {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .header .nav ul {
+    justify-content: center;
+  }
+
+  .logo {
+          width: 140px;
+          height: auto;
+  }
+}
  
  
